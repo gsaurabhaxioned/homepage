@@ -317,7 +317,7 @@ header .wrapper {
 /* our services start  */
 
 .our-services {
-  padding: 13px 0;
+  padding: 13px 0 67px;
 }
 
   .our-services-icons {
@@ -402,6 +402,13 @@ header .wrapper {
   }
 
 /* our services end  */
+/* our latest work start  */
+
+  .our-latest-work {
+    background-color: #F0F0F0;
+  }
+
+/* our lastest work end  */
 /*=================================
   main styling ends here
 =================================*/
