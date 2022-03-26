@@ -533,6 +533,29 @@ header .wrapper {
   }
 
 /* affiliations end  */
+/* get in touch start  */
+
+  .get-in-touch {
+    padding: 57px 0;
+    background: #003E57;
+  }
+
+  .get-in-touch h3 {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .get-in-touch form {
+    margin-top: 42px;
+  }
+
+  .get-in-touch form input {
+    display: block;
+  }
+
+/* get in touch end  */
 /*=================================
   main styling ends here
 =================================*/
