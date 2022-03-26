@@ -287,6 +287,32 @@ header .wrapper {
     bottom: -57px;
   }
 
+  .captcha:hover > .captcha-contents {
+    display: block;
+  }
+
+  .captcha-contents {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 9px;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .captcha-contents:hover {
+    color: #ffa500;
+  }
+
 /* how can we help you end  */
 /* our services start  */
 
