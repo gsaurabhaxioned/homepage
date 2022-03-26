@@ -54,6 +54,7 @@ em { font-style: italic; }
 
 img {
   width: 100%;
+  height: 100%;
   border: 0;
   vertical-align: middle;
 }
@@ -99,18 +100,95 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1536px;
+  width: 58.2%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
 
+header {
+  padding: 17px 0;
+}
 
+header .wrapper {
+  width: 96.9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.ham {
+  display: none;
+}
 
+.menus {
+  margin-left: 1%;
+  flex-basis: 38.1%;
+}
 
+.menus ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menus ul li a {
+  color: rgb(0,0,0,0.8);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all ease-in-out 0.4s;
+  -webkit-transition: all ease-in-out 0.4s;
+  -moz-transition: all ease-in-out 0.4s;
+  -o-transition: all ease-in-out 0.4s;
+  -ms-transition: all ease-in-out 0.4s;
+}
+
+.menus ul li a:hover {
+  color: #ffa500;
+}
+
+.header-icons {
+  margin-right: 0.4%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 4.6%;
+    
+}
+
+.header-icons li a {
+  text-indent: -9999px;
+}
+
+.header-icons li a::before {
+  content: "\f230";
+  float: right;
+  font-size: 13px;
+  font-family: "fontAwesome";
+  text-indent: 0;
+  transition: all ease-in-out 0.4s;
+  -webkit-transition: all ease-in-out 0.4s;
+  -moz-transition: all ease-in-out 0.4s;
+  -o-transition: all ease-in-out 0.4s;
+  -ms-transition: all ease-in-out 0.4s;
+}
+
+.header-icons li:nth-child(2) a::before {
+  content: "\f099";
+}
+
+.header-icons li:nth-child(3) a::before {
+  content: "\f0e1";
+}
+
+.header-icons li:nth-child(4) a::before {
+  content: "\f16d";
+}
+
+.header-icons li a:hover:before {
+  color: rgb(0,0,0,0.8);
+}
 
 /*=================================
   Header styling ends here
@@ -119,14 +197,25 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* banner styling start  */
 
+  .banner .wrapper {
+    width: 100%;
+    position: relative;
+  }
 
+  .sunlife {
+    width: 49.9%;
+    background-color: #F6623A;
+    color: rgb(255,255,255,0.7);
+  }
 
+  .banner h2 {
+    color: rgb(255,255,255,0.7);
+    font-size: 15px;
+  }
 
-
-
-
-
+/* banner styling end  */
 /*=================================
   main styling ends here
 =================================*/
@@ -149,6 +238,9 @@ li {
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
-
+header .wrapper {
+  flex-direction: column;
+  row-gap: 20px;
+}
 
 }  
