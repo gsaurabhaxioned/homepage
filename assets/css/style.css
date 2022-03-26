@@ -126,8 +126,20 @@ header .wrapper {
   align-items: center;
 }
 
-.ham {
+.ham,.cross {
   display: none;
+  text-indent: -9999px;
+}
+
+.ham::before,.cross::before {
+  content: "\f0c9";
+  float: right;
+  font-family: "fontAwesome";
+  text-indent: 0;
+}
+
+.cross::before {
+  content: "\f00d";
 }
 
 .menus {
@@ -153,7 +165,7 @@ header .wrapper {
 }
 
 .menus ul li a:hover {
-  color: #ffa500;
+  color: #ff0000;
 }
 
 .header-icons {
@@ -195,7 +207,7 @@ header .wrapper {
 }
 
 .header-icons li a:hover:before {
-  color: rgb(0,0,0,0.8);
+  color: #ff0000;
 }
 
 /*=================================
@@ -250,7 +262,7 @@ header .wrapper {
   }
 
   .read-more:hover {
-    color: rgb(0,0,0,0.8);
+    color: #ff0000;
   }
 
 /* banner styling end  */
@@ -310,7 +322,7 @@ header .wrapper {
   }
 
   .captcha-contents:hover {
-    color: #ffa500;
+    color: #ff0000;
   }
 
 /* how can we help you end  */
@@ -344,7 +356,7 @@ header .wrapper {
   }
 
   .service-item a:hover {
-    color: #ffa500;
+    color: #ff0000;
   }
 
   .service-item a::before {
@@ -361,8 +373,8 @@ header .wrapper {
     -ms-transition: all ease-in-out 0.4s;
   }
 
-  .service-item a:hover::before {
-    color: rgb(0,0,0,0.8);
+  .service-item a:hover:before {
+    color: #ff0000;
   }
 
   .service-item:nth-child(2) a::before {
@@ -405,11 +417,122 @@ header .wrapper {
 /* our latest work start  */
 
   .our-latest-work {
-    padding: 72px 0;
+    padding-top: 72px;
     background-color: #F0F0F0;
   }
 
+  .view-portfolio {
+    margin-top: 17px;
+    text-align: center;
+  }
+
+  .view-portfolio a {
+    color: rgb(0,0,0,0.9);
+    font-size: 10px;
+    font-weight: bold;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .view-portfolio a:hover {
+    color: #ff0000;
+  }
+
+  .lates-work-images {
+    margin-top: 49px;
+  }
+
+  .lates-work-images .wrapper {
+    width: 100%;
+    display: flex;
+  }
+
+  .latest-work-image-background {
+    position: relative;
+  }
+
+  .latest-work-image-background:hover {
+    background-color: #fff;
+    opacity: 0.5;
+  }
+
+  .latest-work-image-background:hover > .latest-work-hover-content {
+    display: block;
+  }
+
+  .latest-work-hover-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+  }
+
+  .latest-work-hover-content a {
+    color: #000;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .latest-work-hover-content a:hover {
+    color: #ff0000;
+  }
+
 /* our lastest work end  */
+/* who we work with start  */
+
+  .who-we-work-with {
+    padding: 73px 0 83px;
+    background: #EB6236;
+  }
+
+  .who-we-work-with h3 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .we-work-with-images {
+    margin-top: 58px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 29px;
+  }
+
+/* who we work with end  */
+/* affiliations start  */
+
+  .affiliations {
+    padding: 71px 0 97px;
+    background: #F4F4F4;
+  }
+
+  .affiliations-images {
+    margin-top: 37px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 25px;
+  }
+
+  .image-background {
+    padding: 2.5% 2.7%;
+    background: #fff;
+  }
+
+  .affiliations-hover-content {
+    display: none;
+  }
+
+/* affiliations end  */
 /*=================================
   main styling ends here
 =================================*/
@@ -437,6 +560,10 @@ header .wrapper {
   row-gap: 20px;
 }
 
+header .wrapper {
+  align-items: flex-start;
+}
+
 .menus {
   width: 95%;
 }
@@ -445,4 +572,55 @@ header .wrapper {
   width: 15%;
 }
 
+.service-item {
+  flex-basis: 30%;
+}
+
 }  
+
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+
+  .menus {
+    padding: 10px;
+    display: none;
+    background: #ff0000;
+    color: #fff;
+  }
+
+  .menus ul {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .menus ul li a:hover {
+    color: #fff;
+  }
+
+  .ham {
+    display: block;
+    margin-right: auto;
+  }
+
+  .banner-content {
+    bottom: 0;
+  }
+
+  .sinlife {
+    padding: 11px 0;
+  }
+
+  .read-more {
+    margin-top: 0;
+  }
+
+  .service-item {
+    flex-basis: 50%;
+  }
+
+  .we-work-with-images figure,.image-background {
+    margin: auto;
+  }
+
+}
