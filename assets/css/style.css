@@ -104,6 +104,13 @@ li {
   width: 58.2%; 
   margin: 0 auto;
 }
+
+/* header styling  */
+h3 {
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+}
 /*=================================
   Header styling starts here
 =================================*/
@@ -164,6 +171,7 @@ header .wrapper {
 .header-icons li a::before {
   content: "\f230";
   float: right;
+  color: #ffa500;
   font-size: 13px;
   font-family: "fontAwesome";
   text-indent: 0;
@@ -204,8 +212,15 @@ header .wrapper {
     position: relative;
   }
 
+  .banner-content {
+    width: 50%;
+    position: absolute;
+    bottom: 43px;
+    right: 0;
+  }
+
   .sunlife {
-    width: 49.9%;
+    padding: 18px;
     background-color: #F6623A;
     color: rgb(255,255,255,0.7);
   }
@@ -215,7 +230,152 @@ header .wrapper {
     font-size: 15px;
   }
 
+  .sunlife p {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .read-more {
+    padding: 10px 22px;
+    margin-top: 17px;
+    color: #ffa500;
+    background: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .read-more:hover {
+    color: rgb(0,0,0,0.8);
+  }
+
 /* banner styling end  */
+/* how can we help you start  */
+
+.how-can-we-help-you {
+  padding: 65px 0;
+}
+
+.how-can-we-help-you .wrapper {
+  width: 100%;
+  position: relative;
+}
+
+  .how-can-we-help-you h3{
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .how-can-we-help-you .wrapper p {
+    width: 59.3%;
+    margin: 38px auto;
+    color: rgb(0,0,0,0.9);
+    font-size: 14px;
+    text-align: center;
+    line-height: 23px;
+  }
+
+  .captcha {
+    width: 45px;
+    height: 51px;
+    position: absolute;
+    right: 0;
+    bottom: -57px;
+  }
+
+/* how can we help you end  */
+/* our services start  */
+
+.our-services {
+  padding: 13px 0;
+}
+
+  .our-services-icons {
+    margin-top: 62px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+  }
+
+  .service-item {
+    flex-basis: 20%;
+    text-align: center;
+  }
+
+  .service-item a {
+    color: rgb(0,0,0,0.7);
+    font-weight: bold;
+    font-size: 14px;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .service-item a:hover {
+    color: #ffa500;
+  }
+
+  .service-item a::before {
+    content: "\f0eb";
+    margin-bottom: 31px;
+    display: block;
+    color: #ffa500;
+    font-family: "fontAwesome";
+    font-size: 96px;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .service-item a:hover::before {
+    color: rgb(0,0,0,0.8);
+  }
+
+  .service-item:nth-child(2) a::before {
+    content: "\f028";
+  }
+
+  .service-item:nth-child(3) a::before {
+    content: "\f002";
+  }
+
+  .service-item:nth-child(4) a::before {
+    content: "\f10a";
+  }
+
+  .service-item:nth-child(5) a::before {
+    content: "\f201";
+  }
+
+  .service-item:nth-child(6) a::before {
+    content: "\f080";
+  }
+
+  .service-item:nth-child(7) a::before {
+    content: "\f040";
+  }
+
+  .service-item:nth-child(8) a::before {
+    content: "\f07a";
+  }
+
+  .service-item:nth-child(9) a::before {
+    content: "\f0eb";
+  }
+
+  .service-item:nth-child(10) a::before {
+    content: "\f061";
+  }
+
+/* our services end  */
 /*=================================
   main styling ends here
 =================================*/
@@ -241,6 +401,14 @@ header .wrapper {
 header .wrapper {
   flex-direction: column;
   row-gap: 20px;
+}
+
+.menus {
+  width: 95%;
+}
+
+.header-icons {
+  width: 15%;
 }
 
 }  
