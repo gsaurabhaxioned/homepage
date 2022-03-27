@@ -455,8 +455,7 @@ header .wrapper {
   }
 
   .latest-work-image-background:hover {
-    background-color: #fff;
-    opacity: 0.5;
+    background-color: rgb(255,255,255,0.5);
   }
 
   .latest-work-image-background:hover > .latest-work-hover-content {
@@ -525,11 +524,24 @@ header .wrapper {
 
   .image-background {
     padding: 2.5% 2.7%;
+    position: relative;
     background: #fff;
   }
 
+  .image-background:hover {
+    background-color: rgb(255,255,255,0.5);
+  }
+
+  .image-background:hover > .affiliations-hover-content {
+    display: block;
+  }
   .affiliations-hover-content {
     display: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 /* affiliations end  */
@@ -550,45 +562,93 @@ header .wrapper {
   .get-in-touch form {
     margin-top: 42px;
     display: flex;
+    justify-content: space-between;
+  }
+
+  .form-left-part {
+    flex-basis: 48.6%;
+  }
+
+  .form-right-part {
+    flex-basis: 41%;
+  }
+
+  .get-in-touch form input {
+    width: 96.6%;
+    padding: 10px 5px;
+  }
+
+  select {
+    width: 100%;
+    padding: 11px 5px;
+    color: rgb(0,0,0,0.6);  
   }
 
   .get-in-touch form label {
     color: rgb(255,255,255,0.8);
-    font-size: 15px;
-  }
-
-  .get-in-touch form input,textarea,select {
-    margin-top: 5px;
-    display: block;
-  }
-
-  .form-left-part input {
-    padding: 6% 79%;
-  }
-
-  select {
-    padding: 6% 91.5%;
-  }
-
-  .form-right-part {
-    margin-left: 32.5%;
-   }
-
-  .checkbox {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     font-size: 14px;
+  }
+
+  .looking-for label {
     white-space: nowrap;
   }
 
+  .get-in-touch form input,textarea,select {
+    margin: 5px 0 12px;
+    display: block;
+  }
+
+  textarea {
+    padding: 10px 0;
+  }
+
   .get-in-touch form [type="checkbox"] {
+    margin-bottom: 0;
     width: auto;
     display: inline;
   }
 
   .red-text {
+    color:rgb(255,165,0,0.7);
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .red-text:hover {
     color: #ff0000;
+  }
+
+  .form-message {
+    margin-top: 16px;
+    color: rgb(255,255,255,0.8);
+    font-size: 13px;
+  }
+
+  .submit {
+    margin-top: 25px;
+    text-align: right;
+  }
+
+  .submit-button {
+    padding: 2.5% 5%;
+    background: #F86438;
+    color: rgb(255,255,255,0.8);
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+  }
+
+  .submit-button:hover {
+    border: 1px solid #ffa500;
+    background-color: transparent;
+    color: #ffa500;
   }
 
 /* get in touch end  */
@@ -614,7 +674,7 @@ header .wrapper {
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
-header .wrapper {
+header .wrapper,.get-in-touch form {
   flex-direction: column;
   row-gap: 20px;
 }
@@ -633,6 +693,10 @@ header .wrapper {
 
 .service-item {
   flex-basis: 30%;
+}
+
+textarea {
+  width: 100%;
 }
 
 }  
