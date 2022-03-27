@@ -542,17 +542,53 @@ header .wrapper {
 
   .get-in-touch h3 {
     color: #fff;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
   }
 
   .get-in-touch form {
     margin-top: 42px;
+    display: flex;
   }
 
-  .get-in-touch form input {
+  .get-in-touch form label {
+    color: rgb(255,255,255,0.8);
+    font-size: 15px;
+  }
+
+  .get-in-touch form input,textarea,select {
+    margin-top: 5px;
     display: block;
+  }
+
+  .form-left-part input {
+    padding: 6% 79%;
+  }
+
+  select {
+    padding: 6% 91.5%;
+  }
+
+  .form-right-part {
+    margin-left: 32.5%;
+   }
+
+  .checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .get-in-touch form [type="checkbox"] {
+    width: auto;
+    display: inline;
+  }
+
+  .red-text {
+    color: #ff0000;
   }
 
 /* get in touch end  */
